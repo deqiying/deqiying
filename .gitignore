@@ -1,0 +1,24 @@
+# Local IDE/editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local agent/tool state
+.agents/
+.codex/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Local environment files
+.env
+.env.*
+!.env.example
