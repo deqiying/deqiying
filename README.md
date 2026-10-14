@@ -99,17 +99,17 @@
 
 <div align="center">
 
-<a href="https://github.com/deqiying/my-agents-plugins">
-  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=my-agents-plugins&theme=tokyonight&hide_border=true&border_radius=10" alt="my-agents-plugins" />
-</a>
 <a href="https://github.com/deqiying/onesearch">
   <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=onesearch&theme=tokyonight&hide_border=true&border_radius=10" alt="onesearch" />
 </a>
-<a href="https://github.com/deqiying/qtool">
-  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=qtool&theme=tokyonight&hide_border=true&border_radius=10" alt="qtool" />
+<a href="https://github.com/deqiying/fast-context">
+  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=fast-context&theme=tokyonight&hide_border=true&border_radius=10" alt="fast-context" />
 </a>
-<a href="https://github.com/deqiying/file-fingerprint">
-  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=file-fingerprint&theme=tokyonight&hide_border=true&border_radius=10" alt="file-fingerprint" />
+<a href="https://github.com/deqiying/fluxdns">
+  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=fluxdns&theme=tokyonight&hide_border=true&border_radius=10" alt="fluxdns" />
+</a>
+<a href="https://github.com/deqiying/ups-warden">
+  <img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=ups-warden&theme=tokyonight&hide_border=true&border_radius=10" alt="ups-warden" />
 </a>
 
 </div>
