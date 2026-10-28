@@ -25,6 +25,18 @@ SECTION = re.compile(
     r"(^## 精选项目[^\S\n]*\n)(.*?)(?=^#{1,2} |\Z)", re.MULTILINE | re.DOTALL
 )
 REPOSITORY = re.compile(r"[A-Za-z0-9-]+/[A-Za-z0-9_.-]+")
+# 精选项目卡片的深海配色；README 中 GitHub 数据卡片使用同一组参数，修改时需两处同步。
+CARD_STYLE = {
+    "bg_color": "150,0B2260,060F2E",
+    "title_color": "7FD8FF",
+    "text_color": "D6E6FF",
+    "icon_color": "7FA2FF",
+    "hide_border": "true",
+    "border_radius": "12",
+}
+# 仅用于精选项目卡片：描述固定按 3 行（接口上限）排版，使卡片等高（400×150），
+# 否则卡片高度随描述行数变化，行内基线对齐后会错落。
+PIN_LAYOUT = {"description_lines_count": "3"}
 
 
 def fetch_pinned(owner, token):
@@ -81,18 +93,12 @@ def render_section(repositories):
     lines = ["", '<div align="center">', ""]
     for repository in repositories:
         owner, name = repository.split("/")
-        query = urlencode({
-            "username": owner,
-            "repo": name,
-            "theme": "tokyonight",
-            "hide_border": "true",
-            "border_radius": "10",
-        })
-        lines.extend([
-            f'<a href="https://github.com/{repository}">',
-            f'  <img src="https://github-stats-extended.vercel.app/api/pin/?{query}" alt="{name}" />',
-            "</a>",
-        ])
+        query = urlencode({"username": owner, "repo": name, **CARD_STYLE, **PIN_LAYOUT})
+        # <a> 与 <img> 之间不留空白：GitHub 会给链接内的空白画下划线，卡片旁出现小横线。
+        lines.append(
+            f'<a href="https://github.com/{repository}">'
+            f'<img src="https://github-stats-extended.vercel.app/api/pin/?{query}" alt="{name}" /></a>'
+        )
     lines.extend(["", "</div>", "", ""])
     return "\n".join(lines)
 

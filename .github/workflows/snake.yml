@@ -20,9 +20,11 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # 深海配色：color_dots 第一个为空格子颜色，其后由浅到深表示贡献量；与 README 主视觉保持一致。
+          # 蛇的颜色刻意不与任何格子色阶重合，避免蛇经过高贡献格子时“隐身”。
           outputs: |
-            dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg?color_snake=#0A2462&color_dots=#EBEDF0,#C6DBFF,#8EB4FF,#4D7CFE,#2346B8
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#7FD8FF&color_dots=#161B22,#0E2A63,#16479E,#2F6FE0,#5B9BFF
 
       - name: Publish generated SVGs
         uses: crazy-max/ghaction-github-pages@v5

@@ -45,9 +45,17 @@ class SyncPinnedTests(unittest.TestCase):
         result = self.path.read_text(encoding="utf-8")
         self.assertEqual(result, self.prefix + sync_pinned.render_section(repositories) + self.suffix)
         self.assertNotIn("owner/old", result)
-        self.assertIn("username=another-owner&repo=new&theme=tokyonight", result)
+        self.assertIn("username=another-owner&repo=new&bg_color=150%2C0B2260%2C060F2E", result)
         self.assertTrue(sync_pinned.sync_readme(self.path, list(reversed(repositories))))
         self.assertFalse(sync_pinned.sync_readme(self.path, list(reversed(repositories))))
+
+    def test_cards_equal_height_and_links_without_inner_whitespace(self):
+        section = sync_pinned.render_section(["owner/a", "owner/b"])
+        cards = [line for line in section.splitlines() if line.startswith("<a ")]
+        self.assertEqual(len(cards), 2)
+        for card in cards:
+            self.assertIn("&description_lines_count=3", card)
+            self.assertRegex(card, r'^<a href="[^"]+"><img [^>]+ /></a>$')
 
     def test_empty_pins_clear_only_cards(self):
         self.assertEqual(self.fetch(self.payload()), [])
