@@ -70,9 +70,9 @@ deqiying@abyss ~ ❯ whoami --verbose
 <div align="center">
 
 <a href="https://github.com/deqiying/onesearch"><img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=onesearch&bg_color=150%2C0B2260%2C060F2E&title_color=7FD8FF&text_color=D6E6FF&icon_color=7FA2FF&hide_border=true&border_radius=12&description_lines_count=3" alt="onesearch" /></a>
-<a href="https://github.com/deqiying/fast-context"><img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=fast-context&bg_color=150%2C0B2260%2C060F2E&title_color=7FD8FF&text_color=D6E6FF&icon_color=7FA2FF&hide_border=true&border_radius=12&description_lines_count=3" alt="fast-context" /></a>
 <a href="https://github.com/deqiying/fluxdns"><img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=fluxdns&bg_color=150%2C0B2260%2C060F2E&title_color=7FD8FF&text_color=D6E6FF&icon_color=7FA2FF&hide_border=true&border_radius=12&description_lines_count=3" alt="fluxdns" /></a>
 <a href="https://github.com/deqiying/ups-warden"><img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=ups-warden&bg_color=150%2C0B2260%2C060F2E&title_color=7FD8FF&text_color=D6E6FF&icon_color=7FA2FF&hide_border=true&border_radius=12&description_lines_count=3" alt="ups-warden" /></a>
+<a href="https://github.com/deqiying/fast-context"><img src="https://github-stats-extended.vercel.app/api/pin/?username=deqiying&repo=fast-context&bg_color=150%2C0B2260%2C060F2E&title_color=7FD8FF&text_color=D6E6FF&icon_color=7FA2FF&hide_border=true&border_radius=12&description_lines_count=3" alt="fast-context" /></a>
 
 </div>
 
